@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>Bolão Meia-Lua</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="navigation">
+            <ul>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="bulb-outline"></ion-icon>
+                        </span>
+                        <span class="text">Palpites</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="calendar-outline"></ion-icon>
+                        </span>
+                        <span class="text">Tabela</span>
+                    </a>
+                </li>
+                <li class="list active">
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="trophy-outline"></ion-icon>
+                        </span>
+                        <span class="text">Ranking</span>
+                    </a>
+                </li>
+
+                <li class="list">
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="flag-outline"></ion-icon>
+                        </span>
+                        <span class="text">Regras</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="text">Sair</span>
+                    </a>
+                </li>
+                <div class="marker"></div>
+            </ul>
+        </div>
+    </div>
+    <div class="cointainerRanking">
+        <div class="headerRanking">
+            <div class="podium">
+                <h2>Podium</h2>
+                <div class="bar first">
+                    <div class="position">1</div>
+                    <p>Primeiro Colocado</p>
+                </div>
+                <div class="bar second">
+                    <div class="position">2</div>
+                    <p>Segundo Colocado</p>
+                </div>
+                <div class="bar third">
+                    <div class="position">3</div>
+                    <p>Terceiro Colocado</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="ranking">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">Participante</th>
+                        <th>Pontos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="">
+                            <div class="rankingPos">4</div>
+                        </td>
+                        <td>
+                            <div class="userName">Raphael Carvalho</div>
+                        </td>
+                        <td>
+                            <div class="points">72</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="rankingPos">5</div>
+                        </td>
+                        <td>
+                            <div class="userName">Ítalo Malaquias</div>
+                        </td>
+                        <td>
+                            <div class="points">54</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="rankingPos">6</div>
+                        </td>
+                        <td>
+                            <div class="userName">Caetano Barros</div>
+                        </td>
+                        <td>
+                            <div class="points">49</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="rankingPos">7</div>
+                        </td>
+                        <td>
+                            <div class="userName">Leonardo Santana</div>
+                        </td>
+                        <td>
+                            <div class="points">48</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="rankingPos">8</div>
+                        </td>
+                        <td>
+                            <div class="userName">Flávio Malaquias</div>
+                        </td>
+                        <td>
+                            <div class="points">32</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="rankingPos">9</div>
+                        </td>
+                        <td>
+                            <div class="userName">Vitor Silveira</div>
+                        </td>
+                        <td>
+                            <div class="points">18</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="rankingPos">10</div>
+                        </td>
+                        <td>
+                            <div class="userName">Gabriel Barros</div>
+                        </td>
+                        <td>
+                            <div class="points">02</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script>
+    const navbar = document.querySelectorAll('.list')
+    //const marker = document.querySelector('.marker')
+
+    function activateLink() {
+        let index = 0
+        navbar.forEach((link) => {
+            index++
+            link.classList.remove('active');
+            //console.log(link.classList)
+            this.classList.add('active');
+            //console.log(link.classList)
+            //if (this.classList.contains('active')) {
+            //    console.log(`position = ${index * 70}`)
+            //}
+        })
+    }
+
+    navbar.forEach((link) => {
+        link.addEventListener('click', activateLink)
+    })
+
+</script>
+
+</html>
